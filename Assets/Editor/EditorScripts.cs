@@ -11,7 +11,7 @@ class EditorScripts
             target = BuildTarget.WebGL,
             scenes = new[] { _debugRoomSceneName, _battleSceneName },
             locationPathName = _locationPath,
-            options = BuildOptions.DetailedBuildReport,
+            options = BuildOptions.None,
         };
         BuildPipeline.BuildPlayer(options);
     }
