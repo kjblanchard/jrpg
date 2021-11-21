@@ -1,0 +1,344 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30a921f138791734b932c109ebc6ccda, type: 3}
+  m_Name: Circle
+  m_EditorClassIdentifier: 
+  BattlerName: Circle
+  BattlerHp: 8
+  BattlerMp: 4
+  BattlerStr: 2
+  BattlerSpd: 2
+  IsPlayer: 0
+  BattlerNameEnum: 5
+  Abilities: []
+  GambitGroups:
+  - BattlerGambits:
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 1
+      - Ability: {fileID: 11400000, guid: 75b3fbe0692253e4999734aaf462589e, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+  - BattlerGambits:
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+  - BattlerGambits:
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+    - ConditionTarget: 1
+      Condition: 8
+      ConditionValue: 0
+      ConstraintTarget: 0
+      ConstraintCondition: 0
+      ConstraintValue: 0
+      AbilityToPerform:
+      - Ability: {fileID: 11400000, guid: 476f8a5be90ce7d4ba3dfb434d542bd4, type: 2}
+        Weight: 100
+      StatusEffectToCheckForConstraint: 0
+  Exp: 7
+  CharPortrait: {fileID: 0}
+  CharColor:
+    serializedVersion: 2
+    rgba: 3355443455
+  ExpRequired: 

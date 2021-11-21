@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a22910da73daa36408ded900830b82ab, type: 3}
+  m_Name: PurpleCircle
+  m_EditorClassIdentifier: 
+  LinesOfDialog:
+  - Dialog: Welcome to the Debug Room!
+    Name: Ringleader
+    IsChoice: 0
+    ChoiceOptions: []
+    SelectionChoice: 0
+  - Dialog: How are you liking it here?
+    Name: Ringleader
+    IsChoice: 1
+    ChoiceOptions:
+    - It's great!
+    - It's..... "nice"
+    SelectionChoice: 0
+  - Dialog: Thanks!  It takes a lot of work to do this
+    Name: Ringleader
+    IsChoice: 0
+    ChoiceOptions: []
+    SelectionChoice: 1
+  - Dialog: Why don't you try making it then?
+    Name: Ringleader
+    IsChoice: 0
+    ChoiceOptions: []
+    SelectionChoice: 2
+  - Dialog: Make sure you watch out for the grass, bad boi's live in there
+    Name: Ringleader
+    IsChoice: 0
+    ChoiceOptions: []
+    SelectionChoice: 0

@@ -1,0 +1,41 @@
+version: 0.2
+env:
+  parameter-store:
+    UNITY_SERIAL: "/CodeBuild/unitySerial"
+    UNITY_USERNAME: "/CodeBuild/unityUsername"
+    UNITY_PASSWORD: "/CodeBuild/unityPassword"
+
+phases:
+  install:
+    commands:
+      - echo Entered the install phase...
+    finally:
+      - echo This always runs even if the update or install command fails 
+  pre_build:
+    commands:
+      - echo Entered the pre_build phase...
+      - newtext="This was built using AWS pipeline automatically! <br>Kevin Blanchard and team<br> This is a reimaged look at a jrpg and is a work in progress."
+      - ls -ld -- */
+    finally:
+      - echo This always runs even if the login command fails 
+  build:
+    commands:
+      - echo Entered the build phase...
+      - unity-editor -quit -batchmode -executeMethod EditorScripts.PerformBuild -serial $UNITY_SERIAL -username $UNITY_USERNAME -password $UNITY_PASSWORD -logFile Logs/buildLog
+      - cat Logs/buildLog
+      - ls
+      - ls -ld -- */
+      - sed -i "/<body>/a $newtext" webgl/index.html
+      - ls -ld -- */
+      - find . -name index.html
+    finally:
+      - echo This always runs even if the install command fails
+  post_build:
+    commands:
+      - echo Entered the post_build phase...
+      - cat Logs/buildLog | grep -i error
+      - echo Build completed on `date`
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'webgl'
