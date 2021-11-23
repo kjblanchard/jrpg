@@ -8,14 +8,22 @@ public class AbilityAnimProjectile : MonoBehaviour
 
     [SerializeField] public Animator _projectileAnimator;
     [SerializeField] public AbilityAnimStep[] _animationSteps;
-    [SerializeField] public bool _shouldWaitForCallback;
     [SerializeField] public Projectiles _projectileType;
+    [SerializeField] public StartProjectileAnimation animationToStart;
+    [SerializeField] public AbilityAnimStep.LocationToMove LocationToSpawn;
 
     private const string _projectileAnimStartTrigger = "startAnimation";
+    private const string _projectileMovingStartTrigger = "startMoveAnimation";
 
 
 
     public void PlaySfx(SoundController.Sfx sfxToPlay) => SoundController.Instance.PlaySfxOneShot(sfxToPlay);
+
+    public void StartMoveAnimation()
+    {
+        _projectileAnimator.enabled = true;
+        _projectileAnimator.SetTrigger(_projectileMovingStartTrigger);
+    }
 
     public void StartAnimation()
     {
@@ -36,7 +44,17 @@ public class AbilityAnimProjectile : MonoBehaviour
 public enum Projectiles
 {
     Default,
-    SwordSlash
+    SwordSlash,
+    Ice,
+    MagicCircle,
+}
+
+[Serializable]
+public enum StartProjectileAnimation
+{
+    Default,
+    Moving,
+    Start,
 }
 
 public class ProjectileEventArgs : EventArgs

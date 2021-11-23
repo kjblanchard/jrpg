@@ -21,11 +21,19 @@ public class BattlerActionPerformComponent
             {
                 var obj = _battleProjectilePool.GetProjectileFromQueue(_currentAbilityAnimationStep
                     .ProjectileToSpawn);
-                obj.transform.position = targetBattler.transform.position;
-                sequence.AppendCallback(() =>
+                obj.transform.position = obj.LocationToSpawn switch
                 {
-                    obj.StartAnimation();
-                });
+                    AbilityAnimStep.LocationToMove.Default => throw new Exception("Wut"),
+                    AbilityAnimStep.LocationToMove.Target => throw new Exception("Wut"),
+                    AbilityAnimStep.LocationToMove.Home => currentBattler.transform.position,
+                    AbilityAnimStep.LocationToMove.TargetCenter => targetBattler.transform.position,
+                    _ => throw new ArgumentOutOfRangeException()
+                };
+                if (!_currentAbilityAnimationStep.ShouldWaitForProjectileToFinish)
+                    sequence.AppendCallback(() =>
+                    {
+                        obj.StartAnimation();
+                    });
             }
 
             if (_currentAbilityAnimationStep.ShouldPlayDamage)

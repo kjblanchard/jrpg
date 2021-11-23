@@ -60,5 +60,6 @@ public class AbilityAnimStep
         Default,
         Target,
         Home,
+        TargetCenter,
     }
 }

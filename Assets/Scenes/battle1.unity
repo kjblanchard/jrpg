@@ -430,10 +430,12 @@ MonoBehaviour:
       elementIcon: {fileID: 0}
     reqReferences: {fileID: 0}
     isExpanded: 1
-    _keyValues: 01000000
-    _keys: 01000000
+    _keyValues: 010000000200000003000000
+    _keys: 010000000200000003000000
     _values:
     - {fileID: 8904038913222863131, guid: 6a302ddcdf22bb6438dcc6b224bad699, type: 3}
+    - {fileID: 6281728264327713086, guid: 6ef9af3fbf5c2ec41bb6efc7163271de, type: 3}
+    - {fileID: 1536303640603971748, guid: 42b6227c0fc4d5048b31b458d24bc5ed, type: 3}
 --- !u!1 &802984112
 GameObject:
   m_ObjectHideFlags: 0
@@ -1636,6 +1638,7 @@ GameObject:
   - component: {fileID: 1687627563}
   - component: {fileID: 1687627564}
   - component: {fileID: 1687627565}
+  - component: {fileID: 1687627560}
   m_Layer: 0
   m_Name: BattleCamera
   m_TagString: MainCamera
@@ -1643,6 +1646,26 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1687627560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687627559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AssetsPPU: 32
+  m_RefResolutionX: 320
+  m_RefResolutionY: 180
+  m_UpscaleRT: 0
+  m_PixelSnapping: 0
+  m_CropFrameX: 1
+  m_CropFrameY: 1
+  m_StretchFill: 1
 --- !u!20 &1687627561
 Camera:
   m_ObjectHideFlags: 0

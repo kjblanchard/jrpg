@@ -20,7 +20,6 @@ public class Ability : ScriptableObject
     public AbilityType SkillType;
     public TargetingType TargetType;
     public SoundController.Sfx[] AbilitySfxToLoad;
-    public GameObject ObjToSpawn;
 
 
     public enum AbilityName
