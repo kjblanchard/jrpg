@@ -120,4 +120,4 @@ MonoBehaviour:
   _animationSteps: []
   _projectileType: 1
   animationToStart: 2
-  LocationToSpawn: 3
+  LocationToSpawn: 1

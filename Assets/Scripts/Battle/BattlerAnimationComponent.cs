@@ -11,6 +11,8 @@ public class BattlerAnimationComponent : MonoBehaviour
     private const string _moveBackName = "startMoveBack";
     private const string _victoryName = "startVictory";
     private const string _takeDamageName = "startTakeDamage";
+    private const string _walkingName = "startWalking";
+    private const string _castingName = "startCasting";
 
     /// <summary>
     /// Changes the current battlers animation.
@@ -30,6 +32,8 @@ public class BattlerAnimationComponent : MonoBehaviour
             AbilityAnimStep.AnimToStartPlaying.Idle => _idleName,
             AbilityAnimStep.AnimToStartPlaying.Victory => _victoryName,
             AbilityAnimStep.AnimToStartPlaying.TakeDamage => _takeDamageName,
+            AbilityAnimStep.AnimToStartPlaying.Walking => _walkingName,
+            AbilityAnimStep.AnimToStartPlaying.Casting => _castingName,
             _ => throw new ArgumentOutOfRangeException(nameof(animToPlays), animToPlays, "You didn't specify a proper enum")
         };
 

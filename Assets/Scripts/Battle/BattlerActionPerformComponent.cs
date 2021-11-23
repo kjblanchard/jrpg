@@ -1,5 +1,6 @@
 using System;
 using DG.Tweening;
+using UnityEngine;
 
 public class BattlerActionPerformComponent
 {
@@ -23,10 +24,18 @@ public class BattlerActionPerformComponent
                     .ProjectileToSpawn);
                 obj.transform.position = obj.LocationToSpawn switch
                 {
-                    AbilityAnimStep.LocationToMove.Default => throw new Exception("Wut"),
-                    AbilityAnimStep.LocationToMove.Target => throw new Exception("Wut"),
-                    AbilityAnimStep.LocationToMove.Home => currentBattler.transform.position,
-                    AbilityAnimStep.LocationToMove.TargetCenter => targetBattler.transform.position,
+                    AbilityAnimStep.LocationToMove.Default => new Vector3(),
+                    AbilityAnimStep.LocationToMove.TargetCenter => targetBattler.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Default),
+                    AbilityAnimStep.LocationToMove.TargetRight => new Vector3(),
+                    AbilityAnimStep.LocationToMove.TargetLeft => new Vector3(),
+                    AbilityAnimStep.LocationToMove.TargetFront => new Vector3(),
+                    AbilityAnimStep.LocationToMove.TargetBack => new Vector3(),
+                    AbilityAnimStep.LocationToMove.PerformingCenter => currentBattler.BattlerLocationHandler.GetBattlerLocation(default),
+                    AbilityAnimStep.LocationToMove.PerformingRight => new Vector3(),
+                    AbilityAnimStep.LocationToMove.PerformingLeft => new Vector3(),
+                    AbilityAnimStep.LocationToMove.PerformingFront => currentBattler.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Left) - new Vector3(0, 0.3f, 0),
+                    AbilityAnimStep.LocationToMove.PerformingBack => new Vector3(),
+                    AbilityAnimStep.LocationToMove.PerformingBottom => currentBattler.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Bottom),
                     _ => throw new ArgumentOutOfRangeException()
                 };
                 if (!_currentAbilityAnimationStep.ShouldWaitForProjectileToFinish)

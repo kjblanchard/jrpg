@@ -66,8 +66,8 @@ public class BattlerLocationHandler
         {
             BattlerLocation.Default => GetCenter,
             BattlerLocation.Top => GetTop,
-            BattlerLocation.Bottom => Vector3.zero,
-            BattlerLocation.Left => Vector3.zero,
+            BattlerLocation.Bottom => GetBottom,
+            BattlerLocation.Left => GetLeft,
             BattlerLocation.Right => GetRight,
             BattlerLocation.TopRight => Vector3.zero,
             BattlerLocation.BottomRight => Vector3.zero,
@@ -92,8 +92,14 @@ public class BattlerLocationHandler
         _battlerSpriteRenderer.transform.position.y,
         _battlerSpriteRenderer.transform.position.z
     );
+    private Vector3 GetLeft => new Vector3(
+        _battlerSpriteRenderer.transform.position.x - _battlerSpriteRendererDimensions.X /2,
+        _battlerSpriteRenderer.transform.position.y,
+        _battlerSpriteRenderer.transform.position.z
+    );
 
     private Vector3 GetBottom => _battlerSpriteRenderer.transform.position - GetBattlerHalfSpriteY;
+
 
     public enum BattlerLocation
     {
@@ -104,7 +110,7 @@ public class BattlerLocationHandler
         Right,
         TopRight,
         BottomRight,
-        LeftRight
+        LeftRight,
     }
 
 }

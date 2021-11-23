@@ -26,7 +26,6 @@ MonoBehaviour:
   SkillType: 1
   TargetType: 0
   AbilitySfxToLoad: 
-  ObjToSpawn: {fileID: 8904038913222863131, guid: 6a302ddcdf22bb6438dcc6b224bad699, type: 3}
   AnimationSteps:
   - Location: 0
     CustomOffset: {x: 0, y: 0, z: 0}
@@ -35,7 +34,7 @@ MonoBehaviour:
     AnimationToStartPlaying: 2
     ProjectileToSpawn: 0
     ShouldWaitForProjectileToFinish: 0
-  - Location: 1
+  - Location: 5
     CustomOffset: {x: 0, y: 0, z: 0}
     AnimLength: 0.5
     ShouldPlayDamage: 0
@@ -49,7 +48,7 @@ MonoBehaviour:
     AnimationToStartPlaying: 3
     ProjectileToSpawn: 0
     ShouldWaitForProjectileToFinish: 0
-  - Location: 2
+  - Location: 7
     CustomOffset: {x: 0, y: 0, z: 0}
     AnimLength: 0.5
     ShouldPlayDamage: 0

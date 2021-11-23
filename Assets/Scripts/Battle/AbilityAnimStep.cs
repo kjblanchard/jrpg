@@ -25,9 +25,19 @@ public class AbilityAnimStep
     {
         var destination = stepToReference.Location switch
         {
-            LocationToMove.Default => attackerBattlerToReference.transform.position,
-            LocationToMove.Target =>  targetBattlerToReference.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Right) + attackerBattlerToReference.BattlerLocationHandler.GetBattlerHalfSpriteX + stepToReference.CustomOffset,
-            LocationToMove.Home => attackerBattlerToReference.transform.position,
+            LocationToMove.Default => Vector3.zero,
+            LocationToMove.PerformingCenter => attackerBattlerToReference.transform.position + stepToReference.CustomOffset,
+            LocationToMove.TargetCenter => Vector3.zero,
+            LocationToMove.TargetRight => Vector3.zero,
+            LocationToMove.TargetLeft => Vector3.zero,
+            LocationToMove.TargetFront => HandleTargetFrontWithOffset(targetBattlerToReference, attackerBattlerToReference, stepToReference.CustomOffset),
+            LocationToMove.TargetBack => Vector3.zero,
+            LocationToMove.PerformingRight => Vector3.zero,
+            LocationToMove.PerformingLeft => Vector3.zero,
+            LocationToMove.PerformingFront => HandlePerformingFront(targetBattlerToReference, attackerBattlerToReference, stepToReference.CustomOffset),
+            LocationToMove.PerformingBack => Vector3.zero,
+            LocationToMove.PerformingBottom => attackerBattlerToReference.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Bottom),
+            LocationToMove.TargetFrontWithPerformingOffset => HandleTargetFrontWithOffset(targetBattlerToReference,attackerBattlerToReference,stepToReference.CustomOffset),
             _ => throw new ArgumentOutOfRangeException()
         };
         var tweener =
@@ -46,6 +56,23 @@ public class AbilityAnimStep
         Idle,
         Victory,
         TakeDamage,
+        Walking,
+        Casting,
+    }
+
+    private static Vector3 HandlePerformingFront(Battler target, Battler attacker, Vector3 localOffset)
+    {
+        return attacker.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Left) + localOffset;
+    }
+
+    private static Vector3 HandleTargetFrontWithOffset(Battler target, Battler attacker, Vector3 localOffset)
+    {
+        if (target.BattleStats.IsPlayer)
+            return target.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Left) +
+                   localOffset - attacker.BattlerLocationHandler.GetBattlerHalfSpriteX;
+        return target.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Right) +
+               localOffset + attacker.BattlerLocationHandler.GetBattlerHalfSpriteX;
+
     }
 
 
@@ -58,8 +85,17 @@ public class AbilityAnimStep
     public enum LocationToMove
     {
         Default,
-        Target,
-        Home,
         TargetCenter,
+        TargetRight,
+        TargetLeft,
+        TargetFront,
+        TargetFrontWithPerformingOffset,
+        TargetBack,
+        PerformingCenter,
+        PerformingRight,
+        PerformingLeft,
+        PerformingFront,
+        PerformingBack,
+        PerformingBottom,
     }
 }
