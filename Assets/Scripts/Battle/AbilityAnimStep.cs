@@ -16,20 +16,20 @@ public class AbilityAnimStep
     public Vector3 CustomOffset;
     public float AnimLength = 1;
     public bool ShouldPlayDamage;
-    public AnimToStartPlaying AnimationToStartPlaying;
+    public AnimToStartPlaying PlayerAnimationToStart;
     public Projectiles ProjectileToSpawn;
     public SoundController.Sfx SoundToPlay;
     public bool ShouldWaitForProjectileToFinish;
-    [SerializeField] public StartProjectileAnimation animationToStart;
+    [SerializeField] public StartProjectileAnimation ProjectileAnimationToStart;
 
 
-    public static Tweener GenerateTweener(Battler attackerBattlerToReference, Battler targetBattlerToReference, AbilityAnimStep stepToReference)
+    public static Tweener GenerateTweener(Battler attackerBattlerToReference, Battler targetBattlerToReference, AbilityAnimStep stepToReference, AbilityAnimProjectile projectile = null)
     {
         var destination = stepToReference.Location switch
         {
             LocationToMove.Default => Vector3.zero,
             LocationToMove.PerformingCenter => attackerBattlerToReference.transform.position + stepToReference.CustomOffset,
-            LocationToMove.TargetCenter => Vector3.zero,
+            LocationToMove.TargetCenter => targetBattlerToReference.transform.position,
             LocationToMove.TargetRight => Vector3.zero,
             LocationToMove.TargetLeft => Vector3.zero,
             LocationToMove.TargetFront => HandleTargetFrontWithOffset(targetBattlerToReference, attackerBattlerToReference, stepToReference.CustomOffset),
@@ -39,37 +39,14 @@ public class AbilityAnimStep
             LocationToMove.PerformingFront => HandlePerformingFront(targetBattlerToReference, attackerBattlerToReference, stepToReference.CustomOffset),
             LocationToMove.PerformingBack => Vector3.zero,
             LocationToMove.PerformingBottom => attackerBattlerToReference.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Bottom),
-            LocationToMove.TargetFrontWithPerformingOffset => HandleTargetFrontWithOffset(targetBattlerToReference,attackerBattlerToReference,stepToReference.CustomOffset),
+            LocationToMove.TargetFrontWithPerformingOffset => HandleTargetFrontWithOffset(targetBattlerToReference, attackerBattlerToReference, stepToReference.CustomOffset),
+            LocationToMove.TargetTop => targetBattlerToReference.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Top) + stepToReference.CustomOffset,
+            LocationToMove.TargetBottom => targetBattlerToReference.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Bottom),
+            LocationToMove.PerformingTop => attackerBattlerToReference.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Top) + stepToReference.CustomOffset,
             _ => throw new ArgumentOutOfRangeException()
         };
-        var tweener =
-            attackerBattlerToReference.transform.DOMove(destination, stepToReference.AnimLength);
-        return tweener;
+        return projectile == null ? attackerBattlerToReference.transform.DOMove(destination, stepToReference.AnimLength) : projectile.transform.DOMove(destination, stepToReference.AnimLength);
     }
-    public static Tweener GenerateTweener(Battler attackerBattlerToReference, Battler targetBattlerToReference, AbilityAnimStep stepToReference, AbilityAnimProjectile projectile)
-    {
-        var destination = stepToReference.Location switch
-        {
-            LocationToMove.Default => Vector3.zero,
-            LocationToMove.PerformingCenter => attackerBattlerToReference.transform.position + stepToReference.CustomOffset,
-            LocationToMove.TargetCenter => targetBattlerToReference.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Top) + stepToReference.CustomOffset,
-            LocationToMove.TargetRight => Vector3.zero,
-            LocationToMove.TargetLeft => Vector3.zero,
-            LocationToMove.TargetFront => HandleTargetFrontWithOffset(targetBattlerToReference, attackerBattlerToReference, stepToReference.CustomOffset),
-            LocationToMove.TargetBack => Vector3.zero,
-            LocationToMove.PerformingRight => Vector3.zero,
-            LocationToMove.PerformingLeft => Vector3.zero,
-            LocationToMove.PerformingFront => HandlePerformingFront(targetBattlerToReference, attackerBattlerToReference, stepToReference.CustomOffset),
-            LocationToMove.PerformingBack => Vector3.zero,
-            LocationToMove.PerformingBottom => attackerBattlerToReference.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Bottom),
-            LocationToMove.TargetFrontWithPerformingOffset => HandleTargetFrontWithOffset(targetBattlerToReference,attackerBattlerToReference,stepToReference.CustomOffset),
-            _ => throw new ArgumentOutOfRangeException()
-        };
-        var tweener =
-            projectile.transform.DOMove(destination, stepToReference.AnimLength);
-        return tweener;
-    }
-
 
     [Serializable]
     public enum AnimToStartPlaying
@@ -87,7 +64,10 @@ public class AbilityAnimStep
 
     private static Vector3 HandlePerformingFront(Battler target, Battler attacker, Vector3 localOffset)
     {
-        return attacker.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Left) + localOffset;
+        if (attacker.BattleStats.IsPlayer)
+            return attacker.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Left) + localOffset;
+        return attacker.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Right) +
+               localOffset;
     }
 
     private static Vector3 HandleTargetFrontWithOffset(Battler target, Battler attacker, Vector3 localOffset)
@@ -116,11 +96,14 @@ public class AbilityAnimStep
         TargetFront,
         TargetFrontWithPerformingOffset,
         TargetBack,
+        TargetTop,
+        TargetBottom,
         PerformingCenter,
         PerformingRight,
         PerformingLeft,
         PerformingFront,
         PerformingBack,
+        PerformingTop,
         PerformingBottom,
     }
 }

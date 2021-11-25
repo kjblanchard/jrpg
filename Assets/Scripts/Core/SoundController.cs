@@ -133,6 +133,7 @@ public class SoundController : MonoBehaviour
         CastMagic,
         Critical,
         Ice,
+        Bolt,
     }
 
 }

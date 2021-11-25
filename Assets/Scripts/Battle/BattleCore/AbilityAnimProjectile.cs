@@ -37,6 +37,7 @@ public class AbilityAnimProjectile : MonoBehaviour
         OnProjectileFinishedEvent(this);
     }
 
+
     private void OnProjectileFinishedEvent(object obj) => ProjectileFinishedEvent?.Invoke(obj, new ProjectileEventArgs(this.gameObject, _projectileType));
 }
 
@@ -47,6 +48,7 @@ public enum Projectiles
     SwordSlash,
     Ice,
     MagicCircle,
+    Bolt,
 }
 
 [Serializable]

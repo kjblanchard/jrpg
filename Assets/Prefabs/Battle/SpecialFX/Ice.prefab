@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6281728264327713086}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -22.23142, y: 216.95839, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -118,33 +118,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _projectileAnimator: {fileID: 8342091527191525288}
   _animationSteps:
-  - Location: 10
-    CustomOffset: {x: 0, y: 0, z: 0}
+  - Location: 0
+    CustomOffset: {x: 0, y: -0.5, z: 0}
     AnimLength: 0
     ShouldPlayDamage: 0
-    AnimationToStartPlaying: 0
+    PlayerAnimationToStart: 0
     ProjectileToSpawn: 0
     SoundToPlay: 8
     ShouldWaitForProjectileToFinish: 0
-    animationToStart: 1
-  - Location: 1
-    CustomOffset: {x: 0, y: 1, z: 0}
-    AnimLength: 1.5
-    ShouldPlayDamage: 0
-    AnimationToStartPlaying: 0
-    ProjectileToSpawn: 0
-    SoundToPlay: 0
-    ShouldWaitForProjectileToFinish: 0
-    animationToStart: 2
-  - Location: 1
-    CustomOffset: {x: 0, y: 0.5, z: 0}
+    ProjectileAnimationToStart: 1
+  - Location: 12
+    CustomOffset: {x: -0.5, y: 0.5, z: 0}
     AnimLength: 1
     ShouldPlayDamage: 0
-    AnimationToStartPlaying: 0
+    PlayerAnimationToStart: 0
     ProjectileToSpawn: 0
     SoundToPlay: 0
     ShouldWaitForProjectileToFinish: 0
-    animationToStart: 0
+    ProjectileAnimationToStart: 0
+  - Location: 7
+    CustomOffset: {x: 0, y: 0.25, z: 0}
+    AnimLength: 1
+    ShouldPlayDamage: 0
+    PlayerAnimationToStart: 0
+    ProjectileToSpawn: 0
+    SoundToPlay: 0
+    ShouldWaitForProjectileToFinish: 0
+    ProjectileAnimationToStart: 0
+  - Location: 7
+    CustomOffset: {x: 0, y: -0.25, z: 0}
+    AnimLength: 0.5
+    ShouldPlayDamage: 0
+    PlayerAnimationToStart: 0
+    ProjectileToSpawn: 0
+    SoundToPlay: 0
+    ShouldWaitForProjectileToFinish: 0
+    ProjectileAnimationToStart: 2
   _projectileType: 2
   animationToStart: 0
-  LocationToSpawn: 10
+  LocationToSpawn: 12
+  _particleSystem: {fileID: 0}

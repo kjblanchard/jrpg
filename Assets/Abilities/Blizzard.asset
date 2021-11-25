@@ -25,57 +25,48 @@ MonoBehaviour:
   TargetType: 1
   AbilitySfxToLoad: 
   AnimationSteps:
-  - Location: 0
-    CustomOffset: {x: 0, y: 0, z: 0}
-    AnimLength: 0.2
-    ShouldPlayDamage: 0
-    AnimationToStartPlaying: 7
-    ProjectileToSpawn: 0
-    SoundToPlay: 0
-    ShouldWaitForProjectileToFinish: 0
-    animationToStart: 0
-  - Location: 10
+  - Location: 12
     CustomOffset: {x: 0, y: 0, z: 0}
     AnimLength: 0.5
     ShouldPlayDamage: 0
-    AnimationToStartPlaying: 0
+    PlayerAnimationToStart: 7
     ProjectileToSpawn: 0
     SoundToPlay: 0
     ShouldWaitForProjectileToFinish: 0
-    animationToStart: 0
-  - Location: 0
-    CustomOffset: {x: 0, y: 0, z: 0}
-    AnimLength: 0.1
-    ShouldPlayDamage: 0
-    AnimationToStartPlaying: 8
-    ProjectileToSpawn: 3
-    SoundToPlay: 6
-    ShouldWaitForProjectileToFinish: 0
-    animationToStart: 0
+    ProjectileAnimationToStart: 0
   - Location: 0
     CustomOffset: {x: 0, y: 0, z: 0}
     AnimLength: 1
     ShouldPlayDamage: 0
-    AnimationToStartPlaying: 0
-    ProjectileToSpawn: 2
-    SoundToPlay: 0
-    ShouldWaitForProjectileToFinish: 1
-    animationToStart: 0
-  - Location: 0
-    CustomOffset: {x: 0, y: 0, z: 0}
-    AnimLength: 0
-    ShouldPlayDamage: 1
-    AnimationToStartPlaying: 3
-    ProjectileToSpawn: 0
-    SoundToPlay: 0
+    PlayerAnimationToStart: 8
+    ProjectileToSpawn: 3
+    SoundToPlay: 6
     ShouldWaitForProjectileToFinish: 0
-    animationToStart: 0
-  - Location: 7
+    ProjectileAnimationToStart: 0
+  - Location: 0
     CustomOffset: {x: 0, y: 0, z: 0}
     AnimLength: 0.25
     ShouldPlayDamage: 0
-    AnimationToStartPlaying: 4
+    PlayerAnimationToStart: 0
+    ProjectileToSpawn: 2
+    SoundToPlay: 8
+    ShouldWaitForProjectileToFinish: 1
+    ProjectileAnimationToStart: 0
+  - Location: 9
+    CustomOffset: {x: 0, y: 0, z: 0}
+    AnimLength: 0.35
+    ShouldPlayDamage: 1
+    PlayerAnimationToStart: 3
     ProjectileToSpawn: 0
     SoundToPlay: 0
     ShouldWaitForProjectileToFinish: 0
-    animationToStart: 0
+    ProjectileAnimationToStart: 0
+  - Location: 0
+    CustomOffset: {x: 0, y: 0, z: 0}
+    AnimLength: 0
+    ShouldPlayDamage: 0
+    PlayerAnimationToStart: 4
+    ProjectileToSpawn: 0
+    SoundToPlay: 0
+    ShouldWaitForProjectileToFinish: 0
+    ProjectileAnimationToStart: 0
