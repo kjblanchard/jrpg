@@ -20,7 +20,7 @@ public class AbilityAnimStep
     public Projectiles ProjectileToSpawn;
     public SoundController.Sfx SoundToPlay;
     public bool ShouldWaitForProjectileToFinish;
-    [SerializeField] public StartProjectileAnimation ProjectileAnimationToStart;
+    public StartProjectileAnimation ProjectileAnimationToStart;
 
 
     public static Tweener GenerateTweener(Battler attackerBattlerToReference, Battler targetBattlerToReference, AbilityAnimStep stepToReference, AbilityAnimProjectile projectile = null)
