@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.InteropServices.WindowsRuntime;
 using DG.Tweening;
 using UnityEngine;
 
@@ -13,6 +14,9 @@ public class BattlerActionPerformComponent
         var sequence = DOTween.Sequence();
         foreach (var _currentAbilityAnimationStep in abilityToPerform.AnimationSteps)
         {
+            if (_currentAbilityAnimationStep.SoundToPlay != default)
+                sequence.AppendCallback(() =>
+                    SoundController.Instance.PlaySfxOneShot(_currentAbilityAnimationStep.SoundToPlay));
             if (_currentAbilityAnimationStep.Location != AbilityAnimStep.LocationToMove.Default)
                 sequence.Append(AbilityAnimStep.GenerateTweener(currentBattler, targetBattler, _currentAbilityAnimationStep));
             else
@@ -38,11 +42,20 @@ public class BattlerActionPerformComponent
                     AbilityAnimStep.LocationToMove.PerformingBottom => currentBattler.BattlerLocationHandler.GetBattlerLocation(BattlerLocationHandler.BattlerLocation.Bottom),
                     _ => throw new ArgumentOutOfRangeException()
                 };
-                if (!_currentAbilityAnimationStep.ShouldWaitForProjectileToFinish)
-                    sequence.AppendCallback(() =>
-                    {
+                if (_currentAbilityAnimationStep.ShouldWaitForProjectileToFinish)
+                {
+                    if (obj._animationSteps.Length < 1)
                         obj.StartAnimation();
-                    });
+                    else
+                    {
+                        PerformSubAction(currentBattler, targetBattler, obj, sequence);
+                    }
+
+                }
+                else
+                {
+                    sequence.AppendCallback(() => obj.StartAnimation());
+                }
             }
 
             if (_currentAbilityAnimationStep.ShouldPlayDamage)
@@ -56,4 +69,46 @@ public class BattlerActionPerformComponent
         sequence.Play();
 
     }
+
+    public static void PerformSubAction(Battler currentBattler, Battler targetBattler,
+        AbilityAnimProjectile projectile, Sequence blankSequence)
+    {
+        var sequence = blankSequence;
+        foreach (var _currentAbilityAnimationStep in projectile._animationSteps)
+        {
+            if (_currentAbilityAnimationStep.SoundToPlay != default)
+                sequence.AppendCallback(() =>
+                    SoundController.Instance.PlaySfxOneShot(_currentAbilityAnimationStep.SoundToPlay));
+            if (_currentAbilityAnimationStep.Location != AbilityAnimStep.LocationToMove.Default)
+                sequence.Append(AbilityAnimStep.GenerateTweener(currentBattler, targetBattler,
+                    _currentAbilityAnimationStep, projectile));
+            else
+                sequence.AppendInterval(_currentAbilityAnimationStep.AnimLength);
+
+
+            if (_currentAbilityAnimationStep.animationToStart != StartProjectileAnimation.Default)
+            {
+
+                switch (_currentAbilityAnimationStep.animationToStart)
+                {
+                    case StartProjectileAnimation.Default:
+                        break;
+                    case StartProjectileAnimation.Moving:
+                        sequence.AppendCallback(projectile.StartMoveAnimation);
+                        break;
+                    case StartProjectileAnimation.Start:
+                        sequence.AppendCallback(projectile.StartAnimation);
+                        break;
+                    default:
+                        throw new ArgumentOutOfRangeException();
+                }
+
+
+                sequence.onComplete = () => DOTween.Sequence();
+                sequence.Play();
+            }
+        }
+    }
 }
+
+

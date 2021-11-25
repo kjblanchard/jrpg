@@ -96,11 +96,14 @@ MonoBehaviour:
       elementIcon: {fileID: 0}
     reqReferences: {fileID: 0}
     isExpanded: 1
-    _keyValues: 0100000002000000030000000400000005000000
-    _keys: 0100000002000000030000000400000005000000
+    _keyValues: 0100000002000000030000000400000005000000080000000600000007000000
+    _keys: 0100000002000000030000000400000005000000080000000600000007000000
     _values:
     - event:/enemyDead
     - event:/levelUpReward
     - event:/dash
     - event:/swordSlash
     - event:/playerturn
+    - event:/ice
+    - event:/castMagic
+    - event:/critical

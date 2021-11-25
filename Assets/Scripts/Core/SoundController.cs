@@ -129,7 +129,10 @@ public class SoundController : MonoBehaviour
         LevelUp = 2,
         Dash = 3,
         SwordSlash = 4,
-        PlayerTurn = 5
+        PlayerTurn = 5,
+        CastMagic,
+        Critical,
+        Ice,
     }
 
 }
