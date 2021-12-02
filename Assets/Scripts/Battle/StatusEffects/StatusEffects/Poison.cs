@@ -1,3 +1,4 @@
+
 public class Poison : StatusEffect
 {
     private const byte _statusLength = 3;
@@ -26,4 +27,5 @@ public class Poison : StatusEffect
         return battlerHp / 4 + _stacks;
 
     }
+
 }

@@ -93,6 +93,12 @@ public abstract class StatusEffect
         StatusEffectEndEvent?.Invoke(this);
     }
 
+    public virtual void OnFirstApplied()
+    {
+
+    }
+
+
 
     /// <summary>
     /// Stat modifiers that is used by the status effects.

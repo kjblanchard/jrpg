@@ -134,6 +134,8 @@ public class SoundController : MonoBehaviour
         Critical,
         Ice,
         Bolt,
+        GetBig,
+        GetSmall,
     }
 
 }

@@ -66,6 +66,7 @@ public class StatusEffectComponent
         var instantiatedStatusEffect = SpawnStatusEffect(statusEffectToAdd, _battler);
         instantiatedStatusEffect.StatusEffectEndEvent += OnStatusEffectEnd;
         _statusEffectList.Add(instantiatedStatusEffect);
+        instantiatedStatusEffect.OnFirstApplied();
     }
 
     /// <summary>
