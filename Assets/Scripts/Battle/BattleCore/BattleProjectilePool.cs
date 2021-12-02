@@ -51,8 +51,16 @@ public class BattleProjectilePool : MonoBehaviour
 
     public AbilityAnimProjectile GetProjectileFromQueue(Projectiles projectileToGet)
     {
-        var item = _projectileQueue[projectileToGet].Dequeue();
-        return item == null ? InstantiateProjectile(projectileToGet) : item.GetComponent<AbilityAnimProjectile>();
+        try
+        {
+            return _projectileQueue[projectileToGet].Dequeue().GetComponent<AbilityAnimProjectile>();
+
+        }
+        catch (Exception e)
+        {
+            return InstantiateProjectile(projectileToGet);
+        }
+        //return item == null ? InstantiateProjectile(projectileToGet) : item.GetComponent<AbilityAnimProjectile>();
     }
 
 

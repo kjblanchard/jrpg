@@ -12,6 +12,7 @@ public class GetBig : StatusEffect
     public override void OnFirstApplied()
     {
         base.OnFirstApplied();
+        SoundController.Instance.PlaySfx(SoundController.Sfx.GetBig);
         var currentScale = _battlerToReference.spriteComp.transform.localScale;
         var newScale = currentScale * 1.25f;
         var tween = _battlerToReference.spriteComp.transform.DOScale(newScale, 1.5f);

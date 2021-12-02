@@ -27,18 +27,9 @@ MonoBehaviour:
   TargetType: 1
   AbilitySfxToLoad: 0a0000000b000000
   AnimationSteps:
-  - Location: 12
-    CustomOffset: {x: 0, y: 0, z: 0}
-    AnimLength: 1
-    ShouldPlayDamage: 0
-    PlayerAnimationToStart: 7
-    ProjectileToSpawn: 0
-    SoundToPlay: 0
-    ShouldWaitForProjectileToFinish: 0
-    ProjectileAnimationToStart: 0
   - Location: 0
     CustomOffset: {x: 0, y: 0, z: 0}
-    AnimLength: 1
+    AnimLength: 0.75
     ShouldPlayDamage: 1
     PlayerAnimationToStart: 8
     ProjectileToSpawn: 0
@@ -48,24 +39,6 @@ MonoBehaviour:
   - Location: 0
     CustomOffset: {x: 0, y: 0, z: 0}
     AnimLength: 1.5
-    ShouldPlayDamage: 0
-    PlayerAnimationToStart: 4
-    ProjectileToSpawn: 0
-    SoundToPlay: 10
-    ShouldWaitForProjectileToFinish: 0
-    ProjectileAnimationToStart: 0
-  - Location: 9
-    CustomOffset: {x: 0, y: 0, z: 0}
-    AnimLength: 0.5
-    ShouldPlayDamage: 0
-    PlayerAnimationToStart: 3
-    ProjectileToSpawn: 0
-    SoundToPlay: 0
-    ShouldWaitForProjectileToFinish: 0
-    ProjectileAnimationToStart: 0
-  - Location: 9
-    CustomOffset: {x: 0, y: 0, z: 0}
-    AnimLength: 0
     ShouldPlayDamage: 0
     PlayerAnimationToStart: 4
     ProjectileToSpawn: 0

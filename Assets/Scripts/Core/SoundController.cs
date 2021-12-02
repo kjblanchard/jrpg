@@ -136,6 +136,7 @@ public class SoundController : MonoBehaviour
         Bolt,
         GetBig,
         GetSmall,
+        Poison
     }
 
 }

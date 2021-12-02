@@ -49,6 +49,7 @@ public enum Projectiles
     Ice,
     MagicCircle,
     Bolt,
+    Poison,
 }
 
 [Serializable]

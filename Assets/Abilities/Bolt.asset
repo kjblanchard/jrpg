@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4f981f67ac771794fbebfc20151330c7, type: 3}
-  m_Name: Thunder
+  m_Name: Bolt
   m_EditorClassIdentifier: 
   Name: Thunder I
   MpCost: 2
@@ -49,7 +49,7 @@ MonoBehaviour:
     ShouldPlayDamage: 0
     PlayerAnimationToStart: 0
     ProjectileToSpawn: 4
-    SoundToPlay: 8
+    SoundToPlay: 9
     ShouldWaitForProjectileToFinish: 1
     ProjectileAnimationToStart: 0
   - Location: 9
