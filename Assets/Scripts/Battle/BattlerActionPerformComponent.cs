@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using DG.Tweening;
 using UnityEngine;
 
@@ -11,7 +13,12 @@ public class BattlerActionPerformComponent
     public static void PerformAction(Battler currentBattler, Battler targetBattler, Ability abilityToPerform, int damageToCause, Action<int> applyDamageFunction, Action finishedFunction)
     {
         var sequenceToPlay = DOTween.Sequence();
-        foreach (var _currentAbilityAnimationStep in abilityToPerform.AnimationSteps)
+
+        var beforeAnimSteps = HandleCastMagicInit(currentBattler, targetBattler, abilityToPerform, sequenceToPlay);
+        var afterAnimSteps = HandleCastMagicEnd(currentBattler, targetBattler, abilityToPerform, sequenceToPlay);
+
+        var steps = beforeAnimSteps.Concat(abilityToPerform.AnimationSteps).Concat(afterAnimSteps);
+        foreach (var _currentAbilityAnimationStep in steps)
         {
             HandleAnimation(currentBattler, _currentAbilityAnimationStep, sequenceToPlay);
             HandlePlaySound(_currentAbilityAnimationStep, sequenceToPlay);
@@ -20,9 +27,55 @@ public class BattlerActionPerformComponent
             HandleDamage(damageToCause, applyDamageFunction, _currentAbilityAnimationStep, sequenceToPlay);
         }
 
+
         sequenceToPlay.onComplete = () => finishedFunction();
         sequenceToPlay.Play();
 
+    }
+
+    private static IEnumerable<AbilityAnimStep> HandleCastMagicInit(Battler currentBattler, Battler targetBattler, Ability abilityToPerform,
+        Sequence sequenceToPlay)
+    {
+        if (abilityToPerform.SortType != Ability.AbilitySortType.Magic) return Array.Empty<AbilityAnimStep>();
+        var walkForwards = new AbilityAnimStep(AbilityAnimStep.LocationToMove.PerformingFront)
+        {
+            AnimLength = 0.75f,
+            PlayerAnimationToStart = AbilityAnimStep.AnimToStartPlaying.Walking,
+        };
+        var castMagic = new AbilityAnimStep(AbilityAnimStep.LocationToMove.Default)
+        {
+            AnimLength = 1,
+            PlayerAnimationToStart = AbilityAnimStep.AnimToStartPlaying.Casting,
+            ProjectileToSpawn = Projectiles.MagicCircle,
+            SoundToPlay = SoundController.Sfx.CastMagic,
+        };
+        return new AbilityAnimStep[]
+        {
+           walkForwards, castMagic
+        };
+
+    }
+    private static IEnumerable<AbilityAnimStep> HandleCastMagicEnd(Battler currentBattler, Battler targetBattler, Ability abilityToPerform,
+        Sequence sequenceToPlay)
+    {
+        if (abilityToPerform.SortType != Ability.AbilitySortType.Magic)
+            return Array.Empty<AbilityAnimStep>();
+        var moveBack = new AbilityAnimStep(AbilityAnimStep.LocationToMove.PerformingCenter)
+        {
+            AnimLength = 0.25f,
+            PlayerAnimationToStart = AbilityAnimStep.AnimToStartPlaying.MoveBack,
+        };
+        var idleAndDamage = new AbilityAnimStep(AbilityAnimStep.LocationToMove.Default)
+        {
+            AnimLength = 0,
+            PlayerAnimationToStart = AbilityAnimStep.AnimToStartPlaying.Idle,
+            ShouldPlayDamage = true
+        };
+        return new[]
+        {
+            moveBack,
+            idleAndDamage
+        };
     }
 
     private static void HandleAnimation(Battler currentBattler, AbilityAnimStep _currentAbilityAnimationStep,
@@ -54,7 +107,7 @@ public class BattlerActionPerformComponent
         obj.transform.position = GetSpawnLocation(obj.LocationToSpawn, currentBattler, targetBattler);
         if (_currentAbilityAnimationStep.ShouldWaitForProjectileToFinish)
         {
-                PerformProjectileAnimations(currentBattler, targetBattler, obj, sequenceToPlay);
+            PerformProjectileAnimations(currentBattler, targetBattler, obj, sequenceToPlay);
         }
         else
         {

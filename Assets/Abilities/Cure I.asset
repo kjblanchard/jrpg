@@ -18,7 +18,10 @@ MonoBehaviour:
   AtkBonusDamage: 2
   StatusEffects: []
   Description: Heals for 1.5xAtk +2
-  SortType: 0
+  AbilityNameEnum: 0
+  SortType: 1
   DamageType: 0
   SkillType: 3
   TargetType: 1
+  AbilitySfxToLoad: 
+  AnimationSteps: []

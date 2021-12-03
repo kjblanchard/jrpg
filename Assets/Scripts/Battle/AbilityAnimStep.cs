@@ -25,6 +25,7 @@ public class AbilityAnimStep
 
     public static Tweener GenerateTweener(Battler attackerBattlerToReference, Battler targetBattlerToReference, AbilityAnimStep stepToReference, AbilityAnimProjectile projectile = null)
     {
+        
         var destination = stepToReference.Location switch
         {
             LocationToMove.Default => Vector3.zero,

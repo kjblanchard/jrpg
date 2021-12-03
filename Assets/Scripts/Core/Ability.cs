@@ -1,5 +1,4 @@
 using System;
-using RotaryHeart.Lib.SerializableDictionary;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Data", menuName = "ScriptableObjects/Stats/Ability", order = 0)]

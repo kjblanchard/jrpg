@@ -34,10 +34,6 @@ public class BattleLoadingState : BattleState
 
     private static void InitializeAbilityProjectiles(Battler[] allBattlers)
     {
-        //var projectiles = allBattlers.SelectMany(battler =>
-        //   battler.BattleStats.Abilities.SelectMany(ability =>
-        //       ability.AnimationSteps.Select(step => step.ProjectileToSpawn)).Distinct());
-        //var battlerAbilities = allBattlers.Select(battler => battler.BattleStats.Abilities);
         foreach (var _allBattler in allBattlers)
         {
             if (_allBattler.battlerAttackAbility.AnimationSteps != null)

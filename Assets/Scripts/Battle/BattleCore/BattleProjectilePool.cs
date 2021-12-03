@@ -26,7 +26,11 @@ public class BattleProjectilePool : MonoBehaviour
     public void CreateInitialInstance(Projectiles projectileToInitialize)
     {
         if (_projectileQueue.ContainsKey(projectileToInitialize))
-            return;
+        {
+            var casted = InstantiateProjectile(projectileToInitialize);
+            casted.ProjectileFinishedEvent += ReturnProjectileToQueueOnFinished;
+            _projectileQueue[projectileToInitialize].Enqueue(casted.gameObject);
+        }
         var castedProjectile = InstantiateProjectile(projectileToInitialize);
         castedProjectile.ProjectileFinishedEvent += ReturnProjectileToQueueOnFinished;
         _projectileQueue.Add(castedProjectile._projectileType, new Queue<GameObject>());
@@ -58,7 +62,9 @@ public class BattleProjectilePool : MonoBehaviour
         }
         catch (Exception e)
         {
-            return InstantiateProjectile(projectileToGet);
+            CreateInitialInstance(projectileToGet);
+            return _projectileQueue[projectileToGet].Dequeue().GetComponent<AbilityAnimProjectile>();
+            //return InstantiateProjectile(projectileToGet);
         }
         //return item == null ? InstantiateProjectile(projectileToGet) : item.GetComponent<AbilityAnimProjectile>();
     }
