@@ -72,7 +72,7 @@ TextureImporter:
       213: -768440990706628193
     second: darkness_22
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -93,6 +93,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -131,6 +132,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -182,6 +184,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -688,6 +702,30 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      darkness_3: 6657680518948412429
+      darkness_4: 6905170561668727943
+      darkness_1: 7042399594261276356
+      darkness_11: -628924419565962401
+      darkness_19: 5960113087348894922
+      darkness_21: 2801066294333975315
+      darkness_7: -6333172395639622390
+      darkness_20: 2112045922449085811
+      darkness_22: -768440990706628193
+      darkness_17: 7980095124699902232
+      darkness_2: 2776905671867084283
+      darkness_8: 490636087706194142
+      darkness_6: -93635978870663623
+      darkness_0: -8665838622460454869
+      darkness_5: -7809934432112933514
+      darkness_9: -487423740113951748
+      darkness_12: -5546507162510833554
+      darkness_18: 6719112504652880663
+      darkness_15: 7341517454988814249
+      darkness_16: 8089953374206246992
+      darkness_14: -7508303819187066368
+      darkness_10: 5536196825944926001
+      darkness_13: 4231536380165490176
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

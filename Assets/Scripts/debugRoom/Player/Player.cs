@@ -29,7 +29,8 @@ public class Player : MonoBehaviour
             return;
 
         var positionToMoveTo = CalculatePositionToMoveForAllBuilds(Application.platform);
-        _rigidBody.DOMove(positionToMoveTo, 1.0f);
+        _rigidBody.gameObject.transform.DOMove(positionToMoveTo, 1.0f);
+        // _rigidBody.DOPlay();
         _playerBattleComponent.UpdateCurrentBattleAreaStepCounter();
     }
 

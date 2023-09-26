@@ -165,7 +165,7 @@ TextureImporter:
       213: 7697622561344256244
     second: kevin-tf_53
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -186,6 +186,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -224,6 +225,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -275,6 +277,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1432,6 +1446,61 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      kevin-tf_52: -1262612980920553451
+      kevin-tf_1: -8241666181242605213
+      kevin-tf_3: -1319344689754400511
+      kevin-tf_19: 7619011453799451872
+      kevin-tf_6: 3886312668330914293
+      kevin-tf_run2: 4985216961864243085
+      kevin-tf_35: -1808230681327683478
+      kevin-tf_36: 3319063234616477354
+      kevin-tf_42: -7583991647872122312
+      kevin-tf_39: 7841186914550716123
+      kevin-tf_run3: -1866440360402355635
+      kevin-tf_2: 7447286410359453289
+      kevin-tf_21: 3087805745095349240
+      kevin-tf_20: -4101236922423040388
+      kevin-tf_40: -1174849997461307702
+      kevin-tf_41: 5277271467102851721
+      kevin-tf_46: 3105364478598094168
+      kevin-tf_4: -7677497648530750630
+      kevin-tf_44: -8516528073381138444
+      kevin-tf_31: -4933876764651921150
+      kevin-tf_53: 7697622561344256244
+      kevin-tf_32: 4215213937753130238
+      kevin-tf_33: -1494153105013500845
+      kevin-tf_16: -209771477447778779
+      kevin-tf_15: -6430816652381604097
+      kevin-tf_7: 7767723225677811638
+      kevin-tf_jumpback1: 7835615050325211044
+      kevin-tf_0: -3091934188087666455
+      kevin-tf_30: 2462944905297494799
+      kevin-tf_idle2: 7253152793731027748
+      kevin-tf_14: -6864739746377138750
+      kevin-tf_34: -1276644114529319718
+      kevin-tf_jumpback2: -7689742434487284878
+      kevin-tf_12: -1455982890203608486
+      kevin-tf_idle1: 6749707249859152440
+      kevin-tf_18: 8909982278846075484
+      kevin-tf_45: 6622581171404828260
+      kevin-tf_38: -2025947342172846026
+      kevin-tf_run1: -49019880234203
+      kevin-tf_27: -6484530084943882836
+      kevin-tf_8: 9011819831717153261
+      kevin-tf_29: -8224478175977384234
+      kevin-tf_43: -5393039820969396464
+      kevin-tf_51: 5904067584911964113
+      kevin-tf_37: -218420975188386116
+      kevin-tf_idle3: -3191425276878226005
+      kevin-tf_5: -3979717150202278147
+      kevin-tf_22: 5625878335199992829
+      kevin-tf_23: -7736420395967231594
+      kevin-tf_13: 9009347003545388224
+      kevin-tf_50: -7460529234335741433
+      kevin-tf_47: 1293687394699199534
+      kevin-tf_28: -2061590401679329607
+      kevin-tf_17: -2098753422990961100
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

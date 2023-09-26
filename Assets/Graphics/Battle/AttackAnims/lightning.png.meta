@@ -87,7 +87,7 @@ TextureImporter:
       213: 5705159792176698606
     second: lightning_27
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -108,6 +108,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -146,6 +147,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -197,6 +199,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -808,6 +822,35 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      lightning_6: 1432331140008966410
+      lightning_15: -2330859943416782802
+      lightning_14: 6011488189109627559
+      lightning_22: 3832034412672932097
+      lightning_0: -2983090718515566234
+      lightning_10: -2217917113931279675
+      lightning_26: -1248212115761276472
+      lightning_1: -1461059339494140160
+      lightning_27: 5705159792176698606
+      lightning_9: 2177600045153698133
+      lightning_3: -822904614842124242
+      lightning_4: 5855786134774209288
+      lightning_23: -8226821858827039225
+      lightning_25: -7971975481395609023
+      lightning_2: -7846319024340782248
+      lightning_18: 2188620764103736322
+      lightning_12: -3885971224963771028
+      lightning_24: -1108614665792563358
+      lightning_8: -4484483892091351510
+      lightning_5: -5474615802020834216
+      lightning_11: 992051439083057050
+      lightning_13: -1118719482792365207
+      lightning_16: -6728086276448795643
+      lightning_19: -5087521596477731298
+      lightning_21: -4178641702566173210
+      lightning_7: -7866223080666467939
+      lightning_17: 5175788040240985837
+      lightning_20: -8201712570927920989
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

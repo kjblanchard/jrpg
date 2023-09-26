@@ -114,7 +114,7 @@ TextureImporter:
       213: -6627730903477311261
     second: ice_36
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -135,6 +135,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -173,6 +174,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -224,6 +226,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1024,6 +1038,44 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      ice_6: -5247323767709746719
+      ice_3: -4621826098645276579
+      ice_21: 4204003012812737219
+      ice_30: 612433613179423349
+      ice_16: -8440761591822105439
+      ice_23: 650335969854735392
+      ice_28: -4835684559804798818
+      ice_1: -1054573163461033994
+      ice_10: -1393516777639934545
+      ice_22: 5545791890442699966
+      ice_27: -5044549583367848605
+      ice_9: 793837492680413095
+      ice_36: -6627730903477311261
+      ice_25: 5203509646722613495
+      ice_2: -4747277866943198223
+      ice_26: 8224932428902959836
+      ice_4: 6655876435703727693
+      ice_33: 5806060456847189623
+      ice_11: 7444627978472932131
+      ice_15: 6349967270860800566
+      ice_24: 6782927114452484720
+      ice_17: 7243321324761738185
+      ice_31: -7795593191240328329
+      ice_35: -176194268908339080
+      ice_32: -742194208156845169
+      ice_20: 4490995392412040270
+      ice_14: -1730731814140972012
+      ice_8: 3061230420963791635
+      ice_29: 1975917936303882888
+      ice_13: 1269928239835390221
+      ice_19: -1687133979563530973
+      ice_18: 764295426477677168
+      ice_7: -8207533070043343097
+      ice_12: 4587956794681966518
+      ice_0: -856085545168688419
+      ice_5: -5679005837793796318
+      ice_34: -4931548220809720127
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

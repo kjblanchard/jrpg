@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using DG.Tweening;
 
 /// <summary>
 /// This state should load as many things as possible at the beginning of the battle while the screen is black to reduce loading during the battle.
@@ -77,6 +78,7 @@ public class BattleLoadingState : BattleState
         _battleComponent.BattleGui.BattleTransitionComponent.BattleFadeOutEvent += (sender, args) =>
         {
             BattleMusicHandler.StopBattleWin();
+            DOTween.defaultAutoPlay = AutoPlay.All;
             SceneController.ChangeGameScene(SceneController.GameScenesEnum.DebugRoom);
         };
 

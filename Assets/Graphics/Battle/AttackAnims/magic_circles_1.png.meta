@@ -291,7 +291,7 @@ TextureImporter:
       213: -1707036087719130882
     second: magic_circles_1_95
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -312,6 +312,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -350,6 +351,7 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -401,6 +403,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2440,6 +2454,103 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      magic_circles_1_62: -5352414511655357237
+      magic_circles_1_65: -5528690878027672025
+      magic_circles_1_64: -2443904573443369712
+      magic_circles_1_28: -6460812300591213472
+      magic_circles_1_61: -450175706297093593
+      magic_circles_1_63: 2013721648053865496
+      magic_circles_1_68: 2099340799523458793
+      magic_circles_1_38: 1625975656529131137
+      magic_circles_1_87: 7891282851175564104
+      magic_circles_1_50: 8180572519492751890
+      magic_circles_1_48: -4161683552432225897
+      magic_circles_1_45: -1402824053523296747
+      magic_circles_1_54: 8961824672278368359
+      magic_circles_1_20: 4470385997217186181
+      magic_circles_1_86: -3603206055889685445
+      magic_circles_1_12: -4882935807521397010
+      magic_circles_1_59: 571462810204144639
+      magic_circles_1_31: 4926637763366814156
+      magic_circles_1_60: -1105257566052655469
+      magic_circles_1_83: 1736890732617940946
+      magic_circles_1_67: -3285820276222133384
+      magic_circles_1_32: -4138697141522710676
+      magic_circles_1_69: 2246757532464689182
+      magic_circles_1_66: -7732999107237913036
+      magic_circles_1_30: 5082369444489398952
+      magic_circles_1_43: 3156739790234301137
+      magic_circles_1_13: -7013193291628649490
+      magic_circles_1_95: -1707036087719130882
+      magic_circles_1_58: 5111024803888671231
+      magic_circles_1_90: -3378672483658858390
+      magic_circles_1_26: -4914815912024548329
+      magic_circles_1_37: 5016147646397023062
+      magic_circles_1_72: -7758856378590110581
+      magic_circles_1_89: 110554875185224938
+      magic_circles_1_22: -5188083152460286699
+      magic_circles_1_40: 2524789642141600980
+      magic_circles_1_11: -1563669524052213320
+      magic_circles_1_56: -3232204895779383873
+      magic_circles_1_55: -4513524630653645313
+      magic_circles_1_19: 5005914244124075927
+      magic_circles_1_21: -6315890766831020
+      magic_circles_1_14: -383994208792072072
+      magic_circles_1_94: 7980193452446592735
+      magic_circles_1_81: 3379730297754142190
+      magic_circles_1_76: -4710445432010647744
+      magic_circles_1_3: -7645377531906930326
+      magic_circles_1_29: 833726744773176790
+      magic_circles_1_42: 3546170482685681758
+      magic_circles_1_92: 337793509409061547
+      magic_circles_1_88: -3813978614572671193
+      magic_circles_1_71: 7410246153769274381
+      magic_circles_1_5: -7433579800656346468
+      magic_circles_1_52: -7290149794935474981
+      magic_circles_1_39: 1454696977565716357
+      magic_circles_1_44: 5685185936835594641
+      magic_circles_1_8: -6966525333825762725
+      magic_circles_1_47: -1692309006971553953
+      magic_circles_1_82: 4020169416361089137
+      magic_circles_1_17: -1978905181862769710
+      magic_circles_1_57: 2499515716738191868
+      magic_circles_1_4: 3696363564632859379
+      magic_circles_1_73: 3947870230556461819
+      magic_circles_1_79: 4335225279888946586
+      magic_circles_1_93: -4553440124733891528
+      magic_circles_1_74: -6606227511958668850
+      magic_circles_1_49: 377668337866223803
+      magic_circles_1_75: -2348449485924098075
+      magic_circles_1_9: 6336219058306218897
+      magic_circles_1_7: -2568688134753209467
+      magic_circles_1_15: 3605721674379202113
+      magic_circles_1_77: 4788451770740189897
+      magic_circles_1_10: 384911410125600211
+      magic_circles_1_23: 6404456476094486755
+      magic_circles_1_24: -3169820471895617624
+      magic_circles_1_51: 698370371647678480
+      magic_circles_1_91: -7880494987803927951
+      magic_circles_1_2: -5776488121636010849
+      magic_circles_1_18: 5894147005447155310
+      magic_circles_1_36: 6229925989296309706
+      magic_circles_1_27: -8437166362425831412
+      magic_circles_1_6: 3154273335157726787
+      magic_circles_1_34: -4663061118941497189
+      magic_circles_1_35: -2136917148846299579
+      magic_circles_1_70: 1163588244907864082
+      magic_circles_1_85: -5765149203398627808
+      magic_circles_1_33: 4422100015527038858
+      magic_circles_1_41: -4479483509128169496
+      magic_circles_1_78: 6279522434336105517
+      magic_circles_1_25: 2141565076826949961
+      magic_circles_1_80: 7925748796130351316
+      magic_circles_1_46: 1814933951976394587
+      magic_circles_1_1: -5122576478094656152
+      magic_circles_1_53: 6568663638980811795
+      magic_circles_1_84: -1313181007785718041
+      magic_circles_1_0: -7870701510078481563
+      magic_circles_1_16: 1295398094901633292
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
