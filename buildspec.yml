@@ -14,6 +14,7 @@ phases:
     finally:
       - echo login to docker before pulling image
       - docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+      - $(aws ecr get-login --no-include-email --region us-east-1)
   pre_build:
     commands:
       - echo Entered the pre_build phase...
